@@ -23,11 +23,9 @@ module.exports.sync = function (defPrompt) {
   }
   var args = getShellArgs();
   if (args === null) return defPrompt;
-  var ps1 = defPrompt;
-  try {
-    var ps1 = execSync(process.env['SHELL'] + args);
-    if (!ps1) ps1 = defPrompt;
-  } catch (err) { }
+  var ps1 = execSync(process.env['SHELL'] + args, true).stdout;
+  console.log('ps1[' + ps1 + ']');
+  if (typeof ps1 === 'undefined') ps1 = defPrompt;
   return ps1;
 };
 
@@ -56,3 +54,4 @@ function getShellArgs() {
   }
   return args;
 }
+
