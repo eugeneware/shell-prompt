@@ -39,12 +39,12 @@ function getShellArgs() {
       case 'bash':
       case 'zsh':
       case 'sh':
-        args = ' -l -i -c \'echo $PS1\'';
+        args = ' -l -i -c \'echo "$PS1"\'';
         break;
 
       case 'tcsh':
       case 'csh':
-        args = ' -c \'echo $prompt\'';
+        args = ' -c \'echo "$prompt"\'';
         break;
 
       default:
