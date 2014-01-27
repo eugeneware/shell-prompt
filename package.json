@@ -1,0 +1,24 @@
+{
+  "name": "shell-prompt",
+  "version": "0.0.1",
+  "description": "Get the PS1 or prompt variable based on your shell type",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eugeneware/shell-prompt"
+  },
+  "keywords": ["shell","prompt","ps1","bash"],
+  "author": "Eugene Ware <eugene@noblesamurai.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/eugeneware/shell-prompt/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "redtape": "~0.1.0",
+    "tape": "~2.3.2"
+  }
+}
