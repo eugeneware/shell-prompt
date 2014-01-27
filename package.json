@@ -1,6 +1,6 @@
 {
   "name": "shell-prompt",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Get the PS1 or prompt variable based on your shell type",
   "main": "index.js",
   "scripts": {
