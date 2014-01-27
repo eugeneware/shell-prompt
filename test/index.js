@@ -40,10 +40,19 @@ it('should be able to return the prompt variable for tcsh', function(t) {
 });
 
 it('should be able to return a default prompt', function(t) {
-  process.env['SHELL'] = 'tcsh';
+  process.env['SHELL'] = 'nosh';
   prompt(function (err, ps1) {
     t.notOk(err);
-    t.ok(ps1.length > 1, 'Got a csh prompt');
+    t.ok(ps1.length > 1, 'Got a default prompt');
+    t.end();
+  });
+});
+
+it('should be able to customize the default prompt', function(t) {
+  process.env['SHELL'] = 'nosh';
+  prompt('myprompt >', function (err, ps1) {
+    t.notOk(err);
+    t.equal(ps1, 'myprompt >');
     t.end();
   });
 });
